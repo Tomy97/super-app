@@ -21,7 +21,7 @@ const routes = createRouter({
       component: Dasboard,
       children: [
         {
-          path: "",
+          path: "home",
           name: "Home",
           component: () => import("../views/HomeViews.vue")
         }

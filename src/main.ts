@@ -3,8 +3,7 @@ import "./style.scss";
 import App from "./App.vue";
 import { createPinia } from "pinia";
 import routes from "./routes/index";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const pinia = createPinia();
 const app = createApp(App);

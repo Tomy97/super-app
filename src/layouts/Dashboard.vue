@@ -1,6 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import TheHeader from "./components/TheHeader.vue";
+</script>
 <template>
-  <div class="container">
-    <h4>Hola mundo soy el dashboard</h4>
-  </div>
+  <TheHeader />
+  <router-view />
 </template>
