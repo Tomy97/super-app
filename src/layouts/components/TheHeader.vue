@@ -1,10 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const isAuth = localStorage.getItem("auth");
+</script>
 <template>
   <nav class="navbar navbar-expand-lg bg-black">
     <div class="container-fluid">
-      <router-link class="navbar-brand text-white" :to="{ name: 'Home' }"
-        >SuperHero App</router-link
-      >
+      <div v-if="isAuth">
+        <router-link class="navbar-brand text-white" :to="{ name: 'Home' }">
+          SuperHero App
+        </router-link>
+      </div>
+      <div v-else>
+        <span class="navbar-brand text-white"> SuperHero App </span>
+      </div>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,6 +26,7 @@
       <div
         class="collapse navbar-collapse justify-content-end"
         id="navbarNavAltMarkup"
+        v-if="isAuth"
       >
         <div class="navbar-nav">
           <router-link :to="{ name: 'MyTeam' }" class="nav-link text-white">

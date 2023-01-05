@@ -1,11 +1,8 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h5>Home</h5>
-      </div>
-    </div>
-  </div>
+  <img
+    src="../assets/img/marvel-dc.jpg"
+    class="img-fluid w-100 px-0"
+    alt="marvel-dc"
+  />
+  <section class="container"></section>
 </template>
-
-<script setup lang="ts"></script>
