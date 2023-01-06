@@ -12,28 +12,29 @@
       <div v-else>
         <span class="navbar-brand text-white"> SuperHero App </span>
       </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="bi bi-list text-white"></i>
-      </button>
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarNavAltMarkup"
-        v-if="isAuth"
-      >
-        <div class="navbar-nav">
-          <router-link :to="{ name: 'MyTeam' }" class="nav-link text-white">
-            Mis Heroes
-          </router-link>
+      <template v-if="isAuth">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list text-white"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <router-link :to="{ name: 'MyTeam' }" class="nav-link text-white">
+              Mis Heroes
+            </router-link>
+          </div>
         </div>
-      </div>
+      </template>
     </div>
   </nav>
 </template>
