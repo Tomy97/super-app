@@ -16,7 +16,7 @@ export const useAuthStore = defineStore("auth", () => {
   });
 
   const routes = useRouter();
-  
+
   const login = (data: IAuth) => {
     if (
       data.email === UserMockData.value.email &&
@@ -30,9 +30,20 @@ export const useAuthStore = defineStore("auth", () => {
     }
   };
 
+  const logOut = () => {
+    localStorage.clear();
+    auth.value = false;
+    user.value = {
+      email: "",
+      password: ""
+    };
+    routes.push({ name: "Login" });
+  };
+
   return {
     user,
     auth,
-    login
+    login,
+    logOut
   };
 });
